@@ -1,3 +1,45 @@
+<?php
+
+session_start();
+if(isset($_SESSION['username'])){
+	// header('location:home.php');
+	header('location: index.php');
+}
+//database connection 
+$database = mysqli_connect("localhost", "root", "", "core-php");
+
+if (isset($_POST['login'])) {
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+
+	$password = md5($password);
+	$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+	$result = mysqli_query($database, $sql);
+// print_r($query);die;
+	if (mysqli_num_rows($result) == 1) {
+		$_SESSION['message'] = 'You are now logged in';
+		$_SESSION['email'] = $email;
+
+
+		if ( $count == 1 ) {
+    $_SESSION['login_id'] = $row['id']; // i prefer to name it login_id, you can use $row['id'] or $row[0]. but i prefer to write with the column name
+
+    if ( $_SESSION['login_id'] == 1 ) { // it means if login id = 1 then go to index.php
+        header("location: index.php");  
+    } else { 
+        header("location: login.php");  
+    }
+}
+		header('location: index.php');
+	}	else {
+		$_SESSION['message'] = 'email/password Combination Incorrect';
+
+	}
+}
+
+
+
+?>
 <!DOCTYPE html>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4 & Angular 7
@@ -146,13 +188,6 @@ License: You must have a valid license purchased only from themeforest(the above
 							<button id="kt_login_forgot_cancel" class="btn btn-secondary btn-pill kt-login__btn-secondary">Cancel</button>
 						</div>
 					</form>
-				</div>
-				<div class="kt-login__account">
-					<span class="kt-login__account-msg">
-						Don't have an account yet ?
-					</span>
-					&nbsp;&nbsp;
-					<a href="javascript:;" id="kt_login_signup" class="kt-login__account-link">Sign Up!</a>
 				</div>
 			</div>	
 		</div>
