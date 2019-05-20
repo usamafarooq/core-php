@@ -1,11 +1,11 @@
 <?php
+include('../db_connection/connection.php');
 
 session_start();
 if(isset($_SESSION['username'])){
 	// header('location:home.php');
 	header('location: index.php');
 }
-
 
 if (isset($_POST['login'])) {
 	$email = $_POST['email'];
@@ -24,7 +24,7 @@ if (isset($_POST['login'])) {
     $_SESSION['login_id'] = $row['id']; // i prefer to name it login_id, you can use $row['id'] or $row[0]. but i prefer to write with the column name
 
     if ( $_SESSION['login_id'] == 1 ) { // it means if login id = 1 then go to index.php
-        header("location: index.php");  
+        header("location: ../index.php");  
     } else { 
         header("location: login.php");  
     }
@@ -117,7 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="kt-login__head">
 						<h3 class="kt-login__title">Sign In To Admin</h3>
 					</div>
-					<form class="kt-form" action="#">
+					<form class="kt-form" action="" method="POST">
 						<div class="input-group">
 							<input class="form-control" type="text" placeholder="Email" name="email" autocomplete="off">
 						</div>
@@ -136,6 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 						<div class="kt-login__actions">
+							<input type="submit" name="login" value="Login">
 							<button id="kt_login_signin_submit" class="btn btn-brand btn-pill kt-login__btn-primary">Sign In</button>
 						</div>
 					</form>
@@ -145,7 +146,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<h3 class="kt-login__title">Sign Up</h3>
 						<div class="kt-login__desc">Enter your details to create your account:</div>
 					</div>
-					<form class="kt-form" action="#">
+					<form class="kt-form" action="" method="POST">
 						<div class="input-group">
 							<input class="form-control" type="text" placeholder="Fullname" name="fullname">
 						</div>
@@ -168,6 +169,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 						<div class="kt-login__actions">
+
 							<button id="kt_login_signup_submit" class="btn btn-brand btn-pill kt-login__btn-primary">Sign Up</button>&nbsp;&nbsp;
 							<button id="kt_login_signup_cancel" class="btn btn-secondary btn-pill kt-login__btn-secondary">Cancel</button>
 						</div>
