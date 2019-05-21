@@ -8,16 +8,17 @@ if(isset($_SESSION['username'])){
 }
 
 if (isset($_POST['login'])) {
-	$email = $_POST['email'];
+	$email_username = $_POST['email_username'];
+	// $username = $_POST['email_username'];
 	$password = $_POST['password'];
 
 	$password = md5($password);
-	$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+	$sql = "SELECT * FROM users WHERE (email='$email_username' OR username='$email_username') AND password='$password'";
 	$result = mysqli_query($database, $sql);
 // print_r($query);die;
 	if (mysqli_num_rows($result) == 1) {
 		$_SESSION['message'] = 'You are now logged in';
-		$_SESSION['email'] = $email;
+		$_SESSION['email_username'] = $email_username;
 
 
 		if ( $count == 1 ) {
@@ -29,7 +30,7 @@ if (isset($_POST['login'])) {
         header("location: login.php");  
     }
 }
-		header('location: index.php');
+		header('location: ../index.php');
 	}	else {
 		$_SESSION['message'] = 'email/password Combination Incorrect';
 
@@ -119,7 +120,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 					<form class="kt-form" action="" method="POST">
 						<div class="input-group">
-							<input class="form-control" type="text" placeholder="Email" name="email" autocomplete="off">
+							<input class="form-control" type="text" placeholder="Email / Username" name="email_username" autocomplete="off">
 						</div>
 						<div class="input-group">
 							<input class="form-control" type="password" placeholder="Password" name="password">
@@ -136,8 +137,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 						<div class="kt-login__actions">
-							<input type="submit" name="login" value="Login">
-							<button id="kt_login_signin_submit" class="btn btn-brand btn-pill kt-login__btn-primary">Sign In</button>
+							<input id="" class="btn btn-brand btn-pill kt-login__btn-primary" type="submit" name="login" value="Login">
+							<!-- <button >Sign In</button> -->
 						</div>
 					</form>
 				</div>
