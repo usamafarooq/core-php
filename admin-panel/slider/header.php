@@ -11,53 +11,52 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
 License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 -->
-<html lang="en">
-<!-- begin::Head -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
-
+<html lang="en" >
+    <!-- begin::Head -->
+    
+<!-- Mirrored from keenthemes.com/metronic/preview/demo1/crud/datatables/basic/paginations.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 May 2019 07:40:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta charset="utf-8"/>
+        <meta charset="utf-8"/>
+        
+        <title>Metronic | Pagination Options Examples</title>
+        <meta name="description" content="Pagination options datatables examples"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Metronic | Dashboard</title>
-    <meta name="description" content="Updates and statistics">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--begin::Fonts -->
+        <script src="../../../../../../../ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+        <script>
+            WebFont.load({
+                google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+                active: function() {
+                    sessionStorage.fonts = true;
+                }
+            });
+        </script>
+        <!--end::Fonts -->
 
-    <!--begin::Fonts -->
-    <script src="../../../../ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-    <script>
-        WebFont.load({
-            google: {
-                "families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]
-            },
-            active: function () {
-                sessionStorage.fonts = true;
-            }
-        });
-    </script>
-    <!--end::Fonts -->
+                    <!--begin::Page Vendors Styles(used by this page) -->
+                            <link href="assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+                        <!--end::Page Vendors Styles -->
+        
+        
+        <!--begin::Global Theme Styles(used by all pages) -->
+                    <link href="assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
+                    <link href="assets/css/demo1/style.bundle.css" rel="stylesheet" type="text/css" />
+                <!--end::Global Theme Styles -->
 
-    <!--begin::Page Vendors Styles(used by this page) -->
-    <link href="assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css"/>
-    <!--end::Page Vendors Styles -->
+        <!--begin::Layout Skins(used by all pages) -->
+        
+<link href="assets/css/demo1/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/demo1/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/demo1/skins/brand/dark.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/demo1/skins/aside/dark.css" rel="stylesheet" type="text/css" />        <!--end::Layout Skins -->
 
-    <!--begin::Global Theme Styles(used by all pages) -->
-    <link href="assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/demo1/style.bundle.css" rel="stylesheet" type="text/css"/>
-    <!--end::Global Theme Styles -->
+        <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    </head>
+    <!-- end::Head -->
 
-    <!--begin::Layout Skins(used by all pages) -->
-
-    <link href="assets/css/demo1/skins/header/base/light.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/demo1/skins/header/menu/light.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/demo1/skins/brand/dark.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/demo1/skins/aside/dark.css" rel="stylesheet" type="text/css"/>
-    <!--end::Layout Skins -->
-
-    <link rel="shortcut icon" href="assets/media/logos/favicon.ico"/>
-</head>
-<!-- end::Head -->
-
-<!-- begin::Body -->
+    <!-- begin::Body -->
 
 <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
 
@@ -157,7 +156,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <i class="kt-menu__section-icon flaticon-more-v2"></i>
                         </li>
                         <li class="kt-menu__item " aria-haspopup="true">
-                            <a href="slider/index.php" class="kt-menu__link ">
+                            <a href="index.php" class="kt-menu__link ">
                                 <span class="kt-menu__link-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
