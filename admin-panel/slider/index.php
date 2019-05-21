@@ -21,7 +21,7 @@ include 'header.php'; ?>
                 <i class="kt-font-brand flaticon2-line-chart"></i>
             </span>
             <h3 class="kt-portlet__head-title">
-                Slider
+                Carousel
             </h3>
         </div>
         <div class="kt-portlet__head-toolbar">
