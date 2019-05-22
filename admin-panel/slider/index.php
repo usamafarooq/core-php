@@ -54,7 +54,7 @@ include 'header.php'; ?>
                 </tr>
             </thead>
             <tbody>
-                <?php if (mysqli_num_rows($result) == 1) {
+                <?php if (mysqli_num_rows($result) != 0) {
                 while($res = mysqli_fetch_array($result)){
                 ?> 
                 <tr>
@@ -63,7 +63,7 @@ include 'header.php'; ?>
                     <td><?php echo $res['description']; ?></td>
                     <td><?php echo $res['button_text']; ?></td>
                     <td><?php echo $res['button_url']; ?></td>
-                    <td><?php echo $res['image']; ?></td>
+                    <td><img src="<?php echo $baseurl; ?>/uploads/<?php echo $res['image']; ?>" style="margin:0 auto;width: 20px;display: block;"></td>
                     <td><?php echo $res['created_at']; ?></td>
                     <td><?php echo $res['updated_at']; ?></td>
                     <td><?php echo $res['status']; ?></td>        
