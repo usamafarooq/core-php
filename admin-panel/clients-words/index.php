@@ -21,15 +21,7 @@ include '../slider/header.php'; ?>
                 <i class="kt-font-brand flaticon2-line-chart"></i>
             </span>
             <h3 class="kt-portlet__head-title">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Client Words
-=======
-                Clients Words
->>>>>>> 5c36c464708b057521d608a40be7ffcd697b79bb
-=======
-                Clients Words
->>>>>>> 5c36c464708b057521d608a40be7ffcd697b79bb
             </h3>
         </div>
         <div class="kt-portlet__head-toolbar">
