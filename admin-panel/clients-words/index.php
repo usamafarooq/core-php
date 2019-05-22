@@ -10,7 +10,7 @@ include '../slider/header.php'; ?>
     <div class="alert alert-light alert-elevate" role="alert">
     <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
     <div class="alert-text">
-        Saved!
+        Saved!!
     </div>
 </div>
 
