@@ -4,7 +4,7 @@ include('../db_connection/connection.php');
 $result = mysqli_query($database, "SELECT * FROM slider");
 
 
-include 'header.php'; ?>
+include '../slider/header.php'; ?>
                                                         <!-- begin:: Content -->
 <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
     <div class="alert alert-light alert-elevate" role="alert">
@@ -21,7 +21,7 @@ include 'header.php'; ?>
                 <i class="kt-font-brand flaticon2-line-chart"></i>
             </span>
             <h3 class="kt-portlet__head-title">
-                Slider
+                Carousel
             </h3>
         </div>
         <div class="kt-portlet__head-toolbar">
@@ -66,7 +66,8 @@ include 'header.php'; ?>
                     <td><?php echo $res['image']; ?></td>
                     <td><?php echo $res['created_at']; ?></td>
                     <td><?php echo $res['updated_at']; ?></td>
-                    <td><?php echo $res['status']; ?></td>        
+                    <td><?php echo $res['status']; ?></td>
+                    
                     <td nowrap></td>
                 </tr>  
                 <?php } }?>                      
@@ -79,4 +80,4 @@ include 'header.php'; ?>
 </div>              
                 
                 
-<?php include 'footer.php'; ?>
+<?php include '../slider/footer.php'; ?>
