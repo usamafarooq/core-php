@@ -28,7 +28,7 @@ include 'header.php'; ?>
             <div class="kt-portlet__head-wrapper">
     <div class="kt-portlet__head-actions">
         &nbsp;
-        <a href="#" class="btn btn-brand btn-elevate btn-icon-sm">
+        <a href="<?php echo "$baseurl" ?>/slider/add.php" class="btn btn-brand btn-elevate btn-icon-sm">
             <i class="la la-plus"></i>
             New Record
         </a>
@@ -66,8 +66,7 @@ include 'header.php'; ?>
                     <td><?php echo $res['image']; ?></td>
                     <td><?php echo $res['created_at']; ?></td>
                     <td><?php echo $res['updated_at']; ?></td>
-                    <td><?php echo $res['status']; ?></td>
-                    
+                    <td><?php echo $res['status']; ?></td>        
                     <td nowrap></td>
                 </tr>  
                 <?php } }?>                      

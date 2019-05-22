@@ -1,7 +1,7 @@
 <?php 
 include('../db_connection/connection.php');
 
-$result = mysqli_query($database, "SELECT * FROM slider");
+$result = mysqli_query($database, "SELECT * FROM client_words");
 
 
 include '../slider/header.php'; ?>
@@ -21,14 +21,22 @@ include '../slider/header.php'; ?>
                 <i class="kt-font-brand flaticon2-line-chart"></i>
             </span>
             <h3 class="kt-portlet__head-title">
-                Carousel
+<<<<<<< HEAD
+<<<<<<< HEAD
+                Client Words
+=======
+                Clients Words
+>>>>>>> 5c36c464708b057521d608a40be7ffcd697b79bb
+=======
+                Clients Words
+>>>>>>> 5c36c464708b057521d608a40be7ffcd697b79bb
             </h3>
         </div>
         <div class="kt-portlet__head-toolbar">
             <div class="kt-portlet__head-wrapper">
     <div class="kt-portlet__head-actions">
         &nbsp;
-        <a href="#" class="btn btn-brand btn-elevate btn-icon-sm">
+        <a href='<?php echo "$baseurl" ?>/clients-words/add.php' class="btn btn-brand btn-elevate btn-icon-sm">
             <i class="la la-plus"></i>
             New Record
         </a>
@@ -44,13 +52,11 @@ include '../slider/header.php'; ?>
                     <th>ID</th>
                     <th>Title</th>
                     <th>Description</th>
-                    <th>Button Text</th>
-                    <th>Button Url</th>
-                    <th>Image</th>
+                    <th>Client Name</th>
+                    <th>Client Designation</th>
+                    <th>Status</th>
                     <th>Created Date</th>
                     <th>Updated Date</th>
-                    <th>Status</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -61,13 +67,13 @@ include '../slider/header.php'; ?>
                     <td><?php echo $res['id']; ?></td>
                     <td><?php echo $res['title']; ?></td>
                     <td><?php echo $res['description']; ?></td>
-                    <td><?php echo $res['button_text']; ?></td>
-                    <td><?php echo $res['button_url']; ?></td>
-                    <td><?php echo $res['image']; ?></td>
+                    <td><?php echo $res['client_name']; ?></td>
+                    <td><?php echo $res['client_designation']; ?></td>
+                    <td><?php echo $res['status']; ?></td>
                     <td><?php echo $res['created_at']; ?></td>
                     <td><?php echo $res['updated_at']; ?></td>
-                    <td><?php echo $res['status']; ?></td>
                     
+
                     <td nowrap></td>
                 </tr>  
                 <?php } }?>                      
