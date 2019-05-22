@@ -10,7 +10,7 @@ include '../slider/header.php'; ?>
     <div class="alert alert-light alert-elevate" role="alert">
     <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
     <div class="alert-text">
-        Saved!!
+        Saved!
     </div>
 </div>
 
@@ -28,7 +28,7 @@ include '../slider/header.php'; ?>
             <div class="kt-portlet__head-wrapper">
     <div class="kt-portlet__head-actions">
         &nbsp;
-        <a href='<?php echo "$baseurl" ?>/clients-words/add.php' class="btn btn-brand btn-elevate btn-icon-sm">
+        <a href="<?php echo "$baseurl" ?>clients-words/add.php" class="btn btn-brand btn-elevate btn-icon-sm">
             <i class="la la-plus"></i>
             New Record
         </a>
@@ -46,13 +46,15 @@ include '../slider/header.php'; ?>
                     <th>Description</th>
                     <th>Client Name</th>
                     <th>Client Designation</th>
-                    <th>Status</th>
+                    <th>Image</th>
                     <th>Created Date</th>
                     <th>Updated Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                <?php if (mysqli_num_rows($result) == 1) {
+                <?php if (mysqli_num_rows($result) != 0) {
                 while($res = mysqli_fetch_array($result)){
                 ?> 
                 <tr>
@@ -61,11 +63,10 @@ include '../slider/header.php'; ?>
                     <td><?php echo $res['description']; ?></td>
                     <td><?php echo $res['client_name']; ?></td>
                     <td><?php echo $res['client_designation']; ?></td>
-                    <td><?php echo $res['status']; ?></td>
+                    <td><img src="<?php echo $baseurl; ?>/uploads/<?php echo $res['image']; ?>" style="margin:0 auto;width: 20px;display: block;"></td>
                     <td><?php echo $res['created_at']; ?></td>
                     <td><?php echo $res['updated_at']; ?></td>
-                    
-
+                    <td><?php echo $res['status']; ?></td>        
                     <td nowrap></td>
                 </tr>  
                 <?php } }?>                      
