@@ -67,7 +67,14 @@ include 'header.php'; ?>
                     <td><?php echo $res['created_at']; ?></td>
                     <td><?php echo $res['updated_at']; ?></td>
                     <td><?php echo $res['status']; ?></td>        
-                    <td nowrap></td>
+                    <td nowrap>
+                        <a href="<?php echo $baseurl.'/slider/delete.php?id='.$res['id']; ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                          <i class="la la-archive"></i>
+                        </a>
+                        <a href="<?php echo $baseurl.'/slider/edit.php?id='.$res['id']; ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                          <i class="la la-edit"></i>
+                        </a>
+                    </td>
                 </tr>  
                 <?php } }?>                      
             </tbody>            
