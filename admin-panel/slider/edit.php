@@ -2,10 +2,14 @@
 include 'header.php';
 include('../db_connection/connection.php');
 
+
 $id = $_GET['id'];
-$editrecord= mysqli_query($database,"SELECT * FROM slider WHERE id=$id");
-while($editrecordres = mysqli_fetch_array($result)){
+$editrecord = mysqli_query($database,"SELECT * FROM slider WHERE id=$id");
+while($editrecordres = mysqli_fetch_array($editrecord)){
 $titlee = $editrecordres['title'];
+$descriptionn = $editrecordres['description'];
+$button_textt = $editrecordres['button_text'];
+$button_urll = $editrecordres['button_url'];
 }
 
 $editresult = mysqli_query($database, "SELECT * FROM slider");
@@ -86,17 +90,17 @@ if (isset($_POST['submit'])) {
                     <div class="form-group">
                         <label for="description">Description</label>
                         <div></div>
-                        <input class="form-control" type="text" value="" name="description" id="description">
+                        <input class="form-control" type="text" value="<?php echo $descriptionn; ?>" name="description" id="description">
                     </div>
                     <div class="form-group">
                         <label for="button_text">Button Text</label>
                         <div></div>
-                        <input class="form-control" type="text" value="" name="button_text" id="button_text">
+                        <input class="form-control" type="text" value="<?php echo $button_textt; ?>" name="button_text" id="button_text">
                     </div>
                     <div class="form-group">
                         <label for="button_url">Button Url</label>
                         <div></div>
-                        <input class="form-control" type="text" value="" name="button_url" id="button_url">
+                        <input class="form-control" type="text" value="<?php echo $button_urll; ?>" name="button_url" id="button_url">
                     </div>
                     <div class="form-group">
                         <label>Status</label>
