@@ -4,6 +4,7 @@ include('../db_connection/connection.php');
 $result = mysqli_query($database, "SELECT * FROM client_words");
 
 
+
 include '../slider/header.php'; ?>
                                                         <!-- begin:: Content -->
 <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
@@ -28,7 +29,7 @@ include '../slider/header.php'; ?>
             <div class="kt-portlet__head-wrapper">
     <div class="kt-portlet__head-actions">
         &nbsp;
-        <a href="<?php echo "$baseurl" ?>clients-words/add.php" class="btn btn-brand btn-elevate btn-icon-sm">
+        <a href="<?php echo "$baseurl" ?>/slider/add.php" class="btn btn-brand btn-elevate btn-icon-sm">
             <i class="la la-plus"></i>
             New Record
         </a>

@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
 				</div>
 			</div>
 			<!--begin::Form-->
-			<form enctype="multipart/form-data" class="kt-form" method="POST" action="">
+			<form YU class="kt-form" method="POST" action="">
 				<div class="kt-portlet__body">
                     <div class="form-group">
                         <label for="title">Title</label>

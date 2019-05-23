@@ -67,7 +67,7 @@ include 'header.php'; ?>
                     <td><?php echo $res['created_at']; ?></td>
                     <td><?php echo $res['updated_at']; ?></td>
                     <td><?php echo $res['status']; ?></td>        
-                    <td nowrap></td>
+                    <!-- <td nowrap></td> -->
                 </tr>  
                 <?php } }?>                      
             </tbody>            
