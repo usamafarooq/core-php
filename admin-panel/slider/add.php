@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
     $button_url = $_POST['button_url'];
     $status = $_POST['status'];
     // echo $status;
-    $target_dir = "C:/xampp/htdocs/core-php/admin-panel/uploads/";
+    $target_dir = "./uploads/";
     $target_file = $target_dir . basename($_FILES["imageUpload"]["name"]);
     $uploadOk = 1;
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
