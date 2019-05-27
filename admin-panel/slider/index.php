@@ -1,10 +1,10 @@
 <?php 
+include 'header.php';
 include('../db_connection/connection.php');
 
 $result = mysqli_query($database, "SELECT * FROM slider");
 
-
-include 'header.php'; ?>
+ ?>
                                                         <!-- begin:: Content -->
 <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
     <div class="alert alert-light alert-elevate" role="alert">

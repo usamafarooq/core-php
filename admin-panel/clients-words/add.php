@@ -8,9 +8,6 @@ if (isset($_POST['submit'])) {
 	$client_name = $_POST['client_name'];
 	$client_designation = $_POST['client_designation'];
 	$status = $_POST['status'];
-	// $file_browser = $_POST['file_browser'];
-	// $file_browser = $_POST['file_browser'];
-	// echo $title . $description . $client_name . $client_designation . $status;
 
 	$target_dir = "C:/xampp/htdocs/core-php/admin-panel/uploads/";
     $target_file = $target_dir . basename($_FILES["imageUpload"]["name"]);

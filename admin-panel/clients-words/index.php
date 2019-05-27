@@ -1,11 +1,10 @@
 <?php 
+include '../slider/header.php'; 
+
 include('../db_connection/connection.php');
 
 $result = mysqli_query($database, "SELECT * FROM client_words");
-
-
-
-include '../slider/header.php'; ?>
+?>
                                                         <!-- begin:: Content -->
 <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
     <div class="alert alert-light alert-elevate" role="alert">
@@ -22,14 +21,14 @@ include '../slider/header.php'; ?>
                 <i class="kt-font-brand flaticon2-line-chart"></i>
             </span>
             <h3 class="kt-portlet__head-title">
-                Client Words
+                Clients Words
             </h3>
         </div>
         <div class="kt-portlet__head-toolbar">
             <div class="kt-portlet__head-wrapper">
     <div class="kt-portlet__head-actions">
         &nbsp;
-        <a href="<?php echo "$baseurl" ?>/slider/add.php" class="btn btn-brand btn-elevate btn-icon-sm">
+        <a href="<?php echo "$baseurl" ?>/clients-words/add.php" class="btn btn-brand btn-elevate btn-icon-sm">
             <i class="la la-plus"></i>
             New Record
         </a>
@@ -68,7 +67,13 @@ include '../slider/header.php'; ?>
                     <td><?php echo $res['created_at']; ?></td>
                     <td><?php echo $res['updated_at']; ?></td>
                     <td><?php echo $res['status']; ?></td>        
-                    <td nowrap></td>
+                    <td nowrap>
+                        <a href="<?php echo $baseurl.'/clients-words/delete.php?id='.$res['id']; ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                          <i class="la la-archive"></i>
+                        </a>
+                        <a href="<?php echo $baseurl.'/clients-words/edit.php?id='.$res['id']; ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                          <i class="la la-edit"></i>
+                    </td>
                 </tr>  
                 <?php } }?>                      
             </tbody>            
