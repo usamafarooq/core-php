@@ -10,6 +10,8 @@ $titlee = $editrecordres['title'];
 $descriptionn = $editrecordres['description'];
 $client_namee = $editrecordres['client_name'];
 $client_designationn = $editrecordres['client_designation'];
+$statuss = $editrecordres['status'];
+
 }
 
 // $editresult = mysqli_query($database, "SELECT * FROM client_words");
@@ -106,9 +108,8 @@ if (isset($_POST['submit'])) {
                         <label>Status</label>
                         <div></div>
                         <select class="custom-select form-control" name="status">
-                            <option value="" selected>Select</option>
-                            <option value="1">Enable</option>
-                            <option value="2">Disable</option>
+                            <option <?php if ($statuss == 1 ) echo 'selected' ; ?> value="1">Enable</option>
+                            <option <?php if ($statuss == 2 ) echo 'selected' ; ?> value="2">Disable</option>
                         </select>
                     </div>
                     <div class="form-group">
