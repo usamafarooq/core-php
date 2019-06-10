@@ -1,9 +1,6 @@
 <?php 
 include '../slider/header.php'; 
-
 include('../db_connection/connection.php');
-
-$result = mysqli_query($database, "SELECT * FROM client_profile");
 
 if (isset($_POST['submit'])) {
 	$short_description = $_POST['short_description'];
@@ -25,7 +22,8 @@ if (isset($_POST['submit'])) {
     }
 
     $image=basename( $_FILES["imageUpload"]["name"],".jpg");
-    if (empty($file_browser) || empty($short_description) || empty($description_heading) || empty($description) || empty($status)){
+
+    if (empty($short_description) || empty($description_heading) || empty($description) || empty($status)){
 
     	if(empty($file_browser)){
             echo "<font color='red'>Image field is empty.</font><br/>";
@@ -52,9 +50,10 @@ if (isset($_POST['submit'])) {
             echo "<font color='green'>Data added successfully.";
         }else{
             echo "Try Again.";
+            // print_r(mysqli_error($database));
         }       
     }
-
+ 
 }
 
 ?>
@@ -68,7 +67,7 @@ if (isset($_POST['submit'])) {
 			<div class="kt-portlet__head">
 				<div class="kt-portlet__head-label">
 					<h3 class="kt-portlet__head-title">
-						Add Client Profiles
+						Add Client Details
 					</h3>
 				</div>
 			</div>

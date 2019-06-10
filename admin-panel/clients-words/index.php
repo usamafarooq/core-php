@@ -63,7 +63,7 @@ $result = mysqli_query($database, "SELECT * FROM client_words");
                     <td><?php echo $res['description']; ?></td>
                     <td><?php echo $res['client_name']; ?></td>
                     <td><?php echo $res['client_designation']; ?></td>
-                    <td><img src="<?php echo $baseurl; ?>/uploads/<?php echo $res['image']; ?>" style="margin:0 auto;width: 20px;display: block;"></td>
+                    <td><img src="<?php echo $baseurl; ?>/uploads/<?php echo $res['image'],".jpg"; ?>" style="margin:0 auto;width: 30px;display: block;height: 20px;"></td>
                     <td><?php echo $res['created_at']; ?></td>
                     <td><?php echo $res['updated_at']; ?></td>
                     <td><?php echo $res['status']; ?></td>        

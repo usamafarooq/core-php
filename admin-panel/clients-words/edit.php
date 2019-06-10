@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
         echo "Sorry, there was an error uploading your file.";
     }
 
-    $image=basename( $_FILES["imageUpload"]["name"],".jpg/.png");
+    $image=basename( $_FILES["imageUpload"]["name"],".jpg",".png",".jpeg");
 
     if(empty($title) || empty($description) || empty($client_name) || empty($client_designation) || empty($status)){
 
